@@ -14,6 +14,7 @@ import { Injectable } from '@angular/core';
 export class AllProductsComponent implements OnInit {
   // creat array to save the data i well get it from API later here 
   products:any[]=[
+    
   ]
   constructor( private service:ProductsService){}
 

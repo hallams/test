@@ -1,4 +1,4 @@
-<div class="box mt-5">
+<div class="box mt-5" style="margin-left: 30px; margin-top: 5px;">
     <div class="my-2 w-25">
         <label for="" class="my-1">categories :</label>
         <select class="form-control">
@@ -8,16 +8,18 @@
             <option value="4">option 4</option>
         </select>
     </div>
-    <div class="row">
-        
-        <div class="col-md-3 -sm -12" *ngFor="let item of products">
+</div>
+
+    
+    <div class="container">
+        <div class="boox"  *ngFor="let item of products">
       
-            <div class="item">
-              <img src="{{item.image}}" alt="">
-              <div class="body">
-                <h4>{{item.title}}</h4>
-                <p>{{item.description}}</p>
-                      </div>
+            <div class="item" style=" width: 200px; height: 400;">
+              <img  style="width: 200px; height: 200px;" src="{{item.image}}" alt="">
+                <div class="body">
+                    <h4>{{item.title}}</h4>
+                    <p>{{item.description}}</p>
+                </div> 
         <!-- <div class="col-md-3 -sm -12" >
 
             <div class="item">
@@ -25,17 +27,15 @@
                 <div class="body">
                     <h4>title</h4>
                     <p>test add description</p>
-                </div> -->
+                </div>
                 <div class="px-3 mb-2 d-flex justify-content-between align-item-center">
                     <label for="">price</label>
-                    <!-- <button class="btn btn-success">price</button> -->
+                    <button class="btn btn-success">price</button> -->
                     <span>50 L.E</span>
-                </div>
-
             </div>
         </div>
-
-</div>
+        <!-- </div> -->
+    </div>
 
 
 

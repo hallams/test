@@ -1,11 +1,14 @@
 nav{
-    background: linear-gradient(to right, #e0c9d1, #342636);
+    background: linear-gradient(to right ,  #051e1f , #bcdae5) ;
     color : #fff;
     .content{
         display: flex;
         justify-content: space-between;
         align-items: center;
         padding: 10px 0;
+        .logo {
+           margin-left: 35px;
+        }
         ul{
             list-style: none;
             display: flex;
