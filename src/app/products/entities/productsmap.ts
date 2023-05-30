@@ -1,13 +1,12 @@
-
-export interface productdetails {
-  productdetails: product[];
-  }
-  export interface product {
-    id : number;
-    category: string;
-    description:string;
-    image : string;
-    price: number;
-    title:string
-  }
-  
+// export interface Productdetails {
+//   productList: Product[];
+// }
+export interface Product {
+  id: number;
+  category: string;
+  description: string;
+  image: string;
+  price: string;
+  title: string;
+  rating:any;
+}
