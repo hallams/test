@@ -3,7 +3,9 @@ import { ProductsService } from '../../service/products.service';
 import { Injectable } from '@angular/core';
 //import observable
 import { Observable } from 'rxjs';
-import {productdetails , product } from '../../entities/productsmap'
+//import {productdetails , product } from '../../entities/productsmap'
+import { Product } from '../entities/productsmap';
+
 
 
 @Component({
