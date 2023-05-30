@@ -1,7 +1,9 @@
 import { Injectable } from '@angular/core';
 import {HttpClient} from '@angular/common/http';
 import { Observable } from 'rxjs';
-import {productdetails} from '../entities/productsmap'
+//import {productdetails} from '../entities/productsmap';
+import { Product } from '../entities/productsmap';
+
 
 @Injectable({
   providedIn: 'root'
@@ -20,8 +22,10 @@ export class ProductsService {
 //   return this.http.get('https://fakestoreapi.com/products')
 // }
 
-getAllProducts() : Observable<productdetails> {
-  return this.http.get<productdetails>(this.BASE_URL + this.GET_product)
-}
-
+//getAllProducts() : Observable<productdetails> {
+//  return this.http.get<productdetails>(this.BASE_URL + this.GET_product)
+//}
+getAllProducts(): Observable<Product[]> {
+    return this.http.get<Product[]>(this.BASE_URL + this.GET_product);
+  }
 }
