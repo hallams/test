@@ -6,7 +6,9 @@ import { ProductDetailsComponent } from './products/component/product-details/pr
 const routes: Routes = [
 //adding path for routing
   {path:"products", component : AllProductsComponent},
-  {path:"details", component :ProductDetailsComponent},
+  {path:"details/:id", component :ProductDetailsComponent},
+  // {path:"det", component :ProductDetailsComponent},
+
   //by defualt this page 
   {path:"**", redirectTo:"products", pathMatch:"full"}
 ];
