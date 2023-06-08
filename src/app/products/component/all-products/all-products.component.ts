@@ -28,19 +28,27 @@ export class AllProductsComponent implements OnInit {
     this.getCategories();
   }
 
+  /**
+   * This method gets all categories from the server.
+   * @returns Observable of type Category[]
+   */
   getCategories() {
     this.service.getAllCategories().subscribe(categories => {
       this.categories = categories;
     });
   }
 
+  /**
+   * Filter products by category.
+   * @param event The event object
+   */
   filterCategory(event: any) {
     const value = event.target.value;
     this.getProductsCategory(value);
   }
 
   /**
-   * Get products by category from the server.
+   * This method gets products by category from the server.
    * @param keyword The category keyword
    * @returns Observable of type Product[]
    */
