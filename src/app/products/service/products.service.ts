@@ -12,22 +12,35 @@ export class ProductsService {
 
   constructor(private http: HttpClient) {}
 
+  /**
+   * Get all products from the server.
+   * @returns Observable of type Product[]
+   */
   getAllProducts(): Observable<Product[]> {
     return this.http.get<Product[]>(`${this.BASE_URL}/products`);
   }
 
+  /**
+   * Get all categories from the server.
+   * @returns Observable of type Category[]
+   */
   getAllCategories(): Observable<Category[]> {
     return this.http.get<Category[]>(`${this.BASE_URL}/products/categories`);
   }
 
+  /**
+   * Get products by category from the server.
+   * @param keyword The category keyword
+   * @returns Observable of type Product[]
+   */
   getProductByCategory(keyword: string): Observable<Product[]> {
     return this.http.get<Product[]>(`${this.BASE_URL}/products/category/${keyword}`);
   }
-  
+
   /**
-   * 
-   * @param id 
-   * @returns observable of type product  from server 
+   * Get product by id from the server.
+   * @param id The product id
+   * @returns Observable of type Product
    */
   getProductById(id: string | null): Observable<Product> {
     return this.http.get<Product>(this.BASE_URL + (id ? `/products/${id}` : ''));
